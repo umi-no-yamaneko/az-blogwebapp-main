@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> {{page_title}} | {{site_title}}</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        </head>
+        <body>
+            <div class="main">
+                {% include "header.html" %}
+                <div class="main">
+                    {% if page_title == 'page1' %}
+                        {% include "contents/page1/" %}
+                    {% elif page_title == 'page2' %}
+                        <h2>This page is {{page_title}} .</h2>
+                    {% else %}
+                        <p>No specified page.</p>
+                    {%endif%}
+                </div>
+                {% include "footer.html" %}
+            </div>
+        </body>
+    </html>

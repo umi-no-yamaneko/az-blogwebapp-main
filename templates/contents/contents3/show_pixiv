@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> {{page_title}} | {{site_title}}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    </head>
+    <body>
+        <div class="main">
+            {% include "header.html" %}
+            <div class="main">
+
+            <p>id = {{pixiv_id}}</p>
+            {% if pixiv_id == 103717776 %}
+            <div class="wallpaper" background-image:url(/static/img/pixiv/103717776.png);>
+            {% elif pixiv_id == 94821248 %}
+            <img src="https://i.pximg.net/img-original/img/2021/12/17/00/58/25/94821248_p0.png">
+            {% else %}
+            <p>存在しないIDです</p>
+            {% endif %}
+            </div>
+        {% include "footer.html" %}
+        </div>
+    </body>
+</html>

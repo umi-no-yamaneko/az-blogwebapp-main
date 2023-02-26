@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> 
+                {% if error_code == '404' %} 
+                    Not Found (404)
+                {% elif error_code == '500' %}
+                    Internal Error (500)
+                {% endif %}
+                | {{site_title}}</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        </head>
+        <body>
+            <div class="main">
+            {% include "header.html" %}
+            {% if error_code == '404' %} 
+                <h1>404 Not Found</h1>
+                <p>お探しのページは存在しません。</p>
+            {% elif error_code == '500' %}
+                <h1>500 Internal Error</h1>
+                <p>システム内部でエラーが発生しました。</p>
+            {% else %}
+                <h1>200 OK</h1>
+                <p>リクエストは正常です</p>
+            {% endif %}
+            {% include "footer.html" %}
+        </body>
+    </html>

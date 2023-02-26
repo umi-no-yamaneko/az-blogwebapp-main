@@ -1,0 +1,14 @@
+<div class="wrap">
+    <div class="linkbox-navi">
+        <a href="./1/">contents1</a>
+    </div>
+    <div class="linkbox-navi">
+        <a href="./2/">contents2</a>
+    </div>
+    <div class="linkbox-navi">
+        <a href="./3/">contents3</a>
+    </div>
+    <div class="linkbox-navi">
+        <a href="./4/">contents4</a>
+    </div>
+</div>

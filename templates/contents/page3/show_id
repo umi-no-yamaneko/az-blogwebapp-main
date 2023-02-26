@@ -1,0 +1,5 @@
+<div class="wrap">
+    <div class="linkbox-navi">
+        <p>txt = {{txt}}</p>
+    </div>
+</div>

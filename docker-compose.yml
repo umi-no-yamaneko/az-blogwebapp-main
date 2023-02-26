@@ -1,0 +1,10 @@
+version: "3.9.8"
+services:
+  app:
+    build: .
+    ports:
+      - "80:80"
+    container_name: CDT-blog
+    volumes:
+      - ./:/opt/build
+    command: flask run --host 0.0.0.0 --port 80

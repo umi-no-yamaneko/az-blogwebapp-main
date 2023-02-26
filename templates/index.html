@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>{{site_title}}</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+        </head>
+        <body>
+            <div class="main">
+                {% include "header.html" %}
+                <div class="main">
+                    {% include "top-navi" %}
+                </div>
+                {% include "footer.html" %}
+            </div>
+        </body>
+    </html>
